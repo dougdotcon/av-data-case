@@ -1,0 +1,24 @@
+id_pedido,tipo_observacao,detalhe
+10054,AMBIGUO_EMPATE_DE_TIMESTAMP,"eventos conflitantes no mesmo instante: U|PAGO|4096.05 vs U|ENVIADO|3792.64; o destino coincide com um deles, então não reportado como divergência"
+10105,AMBIGUO_EMPATE_DE_TIMESTAMP,"eventos conflitantes no mesmo instante: U|ENVIADO|6615.23 vs U|PAGO|6125.21; o destino coincide com um deles, então não reportado como divergência"
+10149,AMBIGUO_EMPATE_DE_TIMESTAMP,"eventos conflitantes no mesmo instante: U|PAGO|3378.80 vs U|CANCELADO|3649.10; o destino coincide com um deles, então não reportado como divergência"
+10004,CLIENTE_ALTERADO_NO_LOG,id_cliente muda ao longo do histórico; vale o do último evento
+10027,CLIENTE_ALTERADO_NO_LOG,id_cliente muda ao longo do histórico; vale o do último evento
+10114,CLIENTE_ALTERADO_NO_LOG,id_cliente muda ao longo do histórico; vale o do último evento
+10128,CLIENTE_ALTERADO_NO_LOG,id_cliente muda ao longo do histórico; vale o do último evento
+10006,EVENTO_DUPLICADO_NO_LOG,1 evento(s) repetido(s) idêntico(s) descartado(s)
+10061,EVENTO_DUPLICADO_NO_LOG,1 evento(s) repetido(s) idêntico(s) descartado(s)
+10076,EVENTO_DUPLICADO_NO_LOG,1 evento(s) repetido(s) idêntico(s) descartado(s)
+10096,EVENTO_DUPLICADO_NO_LOG,1 evento(s) repetido(s) idêntico(s) descartado(s)
+10108,EVENTO_DUPLICADO_NO_LOG,1 evento(s) repetido(s) idêntico(s) descartado(s)
+10011,ID_REUTILIZADO_APOS_EXCLUSAO,pedido excluído (D) e criado de novo (I) com o mesmo id; vale o último evento
+10029,ID_REUTILIZADO_APOS_EXCLUSAO,pedido excluído (D) e criado de novo (I) com o mesmo id; vale o último evento
+10126,ID_REUTILIZADO_APOS_EXCLUSAO,pedido excluído (D) e criado de novo (I) com o mesmo id; vale o último evento
+10013,SEM_EVENTO_DE_CRIACAO,log começa em U (captura iniciou depois do pedido); estado reconstruído do 1º evento visto
+10059,SEM_EVENTO_DE_CRIACAO,log começa em U (captura iniciou depois do pedido); estado reconstruído do 1º evento visto
+10081,SEM_EVENTO_DE_CRIACAO,log começa em U (captura iniciou depois do pedido); estado reconstruído do 1º evento visto
+10103,SEM_EVENTO_DE_CRIACAO,log começa em U (captura iniciou depois do pedido); estado reconstruído do 1º evento visto
+10023,TIMESTAMP_DESTINO_DESATUALIZADO_SEM_IMPACTO,origem 2026-05-25 11:30 UTC; destino 2026-05-19 02:30 UTC; cliente/status/valor idênticos
+10053,TIMESTAMP_DESTINO_POSTERIOR_A_ORIGEM,origem 2026-06-28 14:52 UTC; destino 2026-07-10 14:52 UTC; cliente/status/valor idênticos
+10060,TIMESTAMP_DESTINO_POSTERIOR_A_ORIGEM,origem 2026-06-13 16:58 UTC; destino 2026-07-20 16:58 UTC; cliente/status/valor idênticos
+10129,TIMESTAMP_DESTINO_POSTERIOR_A_ORIGEM,origem 2026-07-01 00:27 UTC; destino 2026-07-21 00:27 UTC; cliente/status/valor idênticos

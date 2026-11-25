@@ -1,0 +1,32 @@
+id_pedido,tipo_divergencia,campo,valor_origem,valor_destino,diferenca_valor,severidade,confianca,causa_provavel,detalhe
+10028,AUSENTE_NO_DESTINO,existencia,existe (PAGO; 2496.64),ausente,,ALTA,ALTA,pedido existente no sistema nunca chegou ao destino,
+10080,AUSENTE_NO_DESTINO,existencia,existe (PAGO; 2047.36),ausente,,ALTA,ALTA,pedido existente no sistema nunca chegou ao destino,
+10099,AUSENTE_NO_DESTINO,existencia,existe (ENTREGUE; 190.47),ausente,,ALTA,ALTA,pedido existente no sistema nunca chegou ao destino,
+10116,AUSENTE_NO_DESTINO,existencia,existe (PAGO; 5031.75),ausente,,ALTA,ALTA,pedido existente no sistema nunca chegou ao destino,
+10135,AUSENTE_NO_DESTINO,existencia,existe (ENVIADO; 1407.42),ausente,,ALTA,ALTA,pedido existente no sistema nunca chegou ao destino,
+10001,CLIENTE_DIVERGENTE,id_cliente,542,565,,MEDIA,ALTA,"mesmo instante, conteúdo diferente (alteração na carga ou conflito)",
+10003,CLIENTE_DIVERGENTE,id_cliente,528,551,,MEDIA,ALTA,"mesmo instante, conteúdo diferente (alteração na carga ou conflito)",
+10140,CLIENTE_DIVERGENTE,id_cliente,510,533,,MEDIA,ALTA,"mesmo instante, conteúdo diferente (alteração na carga ou conflito)",
+10002,DUPLICADO_NO_DESTINO,linhas_no_destino,1,2,1912.59,ALTA,ALTA,mais de uma linha para o mesmo pedido no destino (soma em dobro no faturamento),linhas idênticas (carga repetida)
+10032,DUPLICADO_NO_DESTINO,linhas_no_destino,1,2,5049.10,ALTA,ALTA,mais de uma linha para o mesmo pedido no destino (soma em dobro no faturamento),linhas extras com conteúdo diferente da linha correta (versão antiga não foi substituída)
+10079,DUPLICADO_NO_DESTINO,linhas_no_destino,1,2,516.00,ALTA,ALTA,mais de uma linha para o mesmo pedido no destino (soma em dobro no faturamento),linhas extras com conteúdo diferente da linha correta (versão antiga não foi substituída)
+10127,DUPLICADO_NO_DESTINO,linhas_no_destino,1,2,4688.94,ALTA,ALTA,mais de uma linha para o mesmo pedido no destino (soma em dobro no faturamento),linhas extras com conteúdo diferente da linha correta (versão antiga não foi substituída)
+10010,EXCLUIDO_PRESENTE_NO_DESTINO,existencia,excluído em 2026-06-03 05:42 UTC,presente (CANCELADO; 3676.05),,ALTA,ALTA,exclusão (D) não foi propagada ao destino,
+10024,EXCLUIDO_PRESENTE_NO_DESTINO,existencia,excluído em 2026-07-12 20:49 UTC,presente (PAGO; 4785.77),,ALTA,ALTA,exclusão (D) não foi propagada ao destino,
+10026,EXCLUIDO_PRESENTE_NO_DESTINO,existencia,excluído em 2026-05-20 09:09 UTC,presente (ENVIADO; 1402.95),,ALTA,ALTA,exclusão (D) não foi propagada ao destino,
+10038,EXCLUIDO_PRESENTE_NO_DESTINO,existencia,excluído em 2026-07-03 00:11 UTC,presente (ENTREGUE; 2243.24),,ALTA,ALTA,exclusão (D) não foi propagada ao destino,
+10056,EXCLUIDO_PRESENTE_NO_DESTINO,existencia,excluído em 2026-06-13 11:23 UTC,presente (CANCELADO; 4162.75),,ALTA,ALTA,exclusão (D) não foi propagada ao destino,
+10022,STATUS_DIVERGENTE,status,CANCELADO,ENVIADO,,MEDIA,ALTA,destino desatualizado: não refletiu o evento mais recente do log,
+10050,STATUS_DIVERGENTE,status,PAGO,CANCELADO,,MEDIA,ALTA,destino desatualizado: não refletiu o evento mais recente do log,
+10093,STATUS_DIVERGENTE,status,ENTREGUE,PAGO,,MEDIA,ALTA,destino desatualizado: não refletiu o evento mais recente do log,
+10107,STATUS_DIVERGENTE,status,CANCELADO,ENVIADO,,MEDIA,ALTA,destino desatualizado: não refletiu o evento mais recente do log,
+10064,VALOR_AUSENTE_NA_ORIGEM,valor_total,1195.80 (último valor conhecido; log veio em branco),0.00,-1195.80,ALTA,MEDIA,"valor nulo no log gravado como 0,00 no destino",o valor real do pedido é desconhecido; usamos o último valor informado como referência
+10098,VALOR_AUSENTE_NA_ORIGEM,valor_total,2033.93 (último valor conhecido; log veio em branco),0.00,-2033.93,ALTA,MEDIA,"valor nulo no log gravado como 0,00 no destino",o valor real do pedido é desconhecido; usamos o último valor informado como referência
+10119,VALOR_AUSENTE_NA_ORIGEM,valor_total,2606.28 (último valor conhecido; log veio em branco),0.00,-2606.28,ALTA,MEDIA,"valor nulo no log gravado como 0,00 no destino",o valor real do pedido é desconhecido; usamos o último valor informado como referência
+10050,VALOR_DIVERGENTE,valor_total,3674.19,3563.92,-110.27,ALTA,ALTA,destino desatualizado: não refletiu o evento mais recente do log,
+10075,VALOR_DIVERGENTE,valor_total,3724.27,3896.37,172.10,ALTA,ALTA,destino desatualizado: não refletiu o evento mais recente do log,
+10084,VALOR_DIVERGENTE,valor_total,761.05,815.50,54.45,ALTA,ALTA,destino desatualizado: não refletiu o evento mais recente do log,
+10020,VALOR_DIVERGENTE_CENTAVOS,valor_total,2448.01,2447.98,-0.03,BAIXA,ALTA,diferença de centavos (arredondamento/ajuste na carga?),
+10031,VALOR_DIVERGENTE_CENTAVOS,valor_total,1178.43,1178.42,-0.01,BAIXA,ALTA,diferença de centavos (arredondamento/ajuste na carga?),
+10045,VALOR_DIVERGENTE_CENTAVOS,valor_total,1700.76,1700.77,0.01,BAIXA,ALTA,diferença de centavos (arredondamento/ajuste na carga?),
+10141,VALOR_DIVERGENTE_CENTAVOS,valor_total,2840.77,2840.78,0.01,BAIXA,ALTA,diferença de centavos (arredondamento/ajuste na carga?),

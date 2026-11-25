@@ -1,0 +1,97 @@
+{
+  "fuso_destino": {
+    "fuso": "UTC",
+    "horas_para_utc": 0,
+    "taxas_de_casamento": {
+      "UTC": 0.9781021897810219,
+      "America/Sao_Paulo (UTC-3)": 0.0
+    }
+  },
+  "pedidos_distintos_no_log": 150,
+  "pedidos_existentes_na_origem": 133,
+  "pedidos_excluidos_na_origem": 17,
+  "linhas_destino": 137,
+  "pedidos_distintos_no_destino": 133,
+  "pedidos_divergentes": 30,
+  "linhas_no_relatorio": 31,
+  "divergencias_por_tipo_pedidos": {
+    "AUSENTE_NO_DESTINO": 5,
+    "EXCLUIDO_PRESENTE_NO_DESTINO": 5,
+    "DUPLICADO_NO_DESTINO": 4,
+    "STATUS_DIVERGENTE": 4,
+    "VALOR_DIVERGENTE_CENTAVOS": 4,
+    "CLIENTE_DIVERGENTE": 3,
+    "VALOR_AUSENTE_NA_ORIGEM": 3,
+    "VALOR_DIVERGENTE": 3
+  },
+  "divergencias_por_tipo_linhas": {
+    "AUSENTE_NO_DESTINO": 5,
+    "EXCLUIDO_PRESENTE_NO_DESTINO": 5,
+    "DUPLICADO_NO_DESTINO": 4,
+    "STATUS_DIVERGENTE": 4,
+    "VALOR_DIVERGENTE_CENTAVOS": 4,
+    "CLIENTE_DIVERGENTE": 3,
+    "VALOR_AUSENTE_NA_ORIGEM": 3,
+    "VALOR_DIVERGENTE": 3
+  },
+  "faturamento_real_rs": 296688.91,
+  "faturamento_relatorio_rs": 308232.91,
+  "diferenca_rs": 11544.0,
+  "faturamento_real_sem_cancelados_rs": 237962.07,
+  "faturamento_relatorio_sem_cancelados_rs": 239613.06,
+  "diferenca_sem_cancelados_rs": 1650.99,
+  "incerteza_empates_rs": 1063.73,
+  "observacoes_por_tipo": {
+    "STATUS_SAIU_DE_ESTADO_FINAL": 56,
+    "EVENTO_DUPLICADO_NO_LOG": 5,
+    "CLIENTE_ALTERADO_NO_LOG": 4,
+    "SEM_EVENTO_DE_CRIACAO": 4,
+    "AMBIGUO_EMPATE_DE_TIMESTAMP": 3,
+    "ID_REUTILIZADO_APOS_EXCLUSAO": 3,
+    "TIMESTAMP_DESTINO_POSTERIOR_A_ORIGEM": 3,
+    "TIMESTAMP_DESTINO_DESATUALIZADO_SEM_IMPACTO": 1
+  },
+  "impacto_por_tipo": [
+    {
+      "tipo_divergencia": "EXCLUIDO_PRESENTE_NO_DESTINO",
+      "qtd_pedidos": 5,
+      "impacto_rs": 16270.76
+    },
+    {
+      "tipo_divergencia": "AUSENTE_NO_DESTINO",
+      "qtd_pedidos": 5,
+      "impacto_rs": -11173.64
+    },
+    {
+      "tipo_divergencia": "DUPLICADO_NO_DESTINO",
+      "qtd_pedidos": 4,
+      "impacto_rs": 12166.63
+    },
+    {
+      "tipo_divergencia": "VALOR_AUSENTE_NA_ORIGEM",
+      "qtd_pedidos": 3,
+      "impacto_rs": -5836.01
+    },
+    {
+      "tipo_divergencia": "VALOR_DIVERGENTE",
+      "qtd_pedidos": 3,
+      "impacto_rs": 116.28
+    },
+    {
+      "tipo_divergencia": "VALOR_DIVERGENTE_CENTAVOS",
+      "qtd_pedidos": 4,
+      "impacto_rs": -0.02
+    },
+    {
+      "tipo_divergencia": "STATUS_DIVERGENTE",
+      "qtd_pedidos": 3,
+      "impacto_rs": 0.0
+    },
+    {
+      "tipo_divergencia": "CLIENTE_DIVERGENTE",
+      "qtd_pedidos": 3,
+      "impacto_rs": 0.0
+    }
+  ],
+  "conferencia_decomposicao_rs": 11544.0
+}
