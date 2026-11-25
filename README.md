@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🔎 Reconciliação de Pedidos
+# Reconciliação de Pedidos
 
 **Case técnico de Engenharia de Dados — AV DATA**
 
@@ -21,7 +21,7 @@ de destino e gera o relatório de divergências, com severidade, confiança e ca
 
 ---
 
-## 📌 Resultado em uma olhada
+## Resultado em uma olhada
 
 | Indicador | Valor |
 |---|---:|
@@ -38,12 +38,12 @@ de destino e gera o relatório de divergências, com severidade, confiança e ca
 | Incerteza por empates de timestamp | até R$ 1.063,73 |
 | Casos que parecem erro, mas não são | 19 |
 
-> 💡 O total de **R$ 11,5 mil** parece pequeno porque erros para cima e para baixo se anulam em parte.
+> O total de **R$ 11,5 mil** parece pequeno porque erros para cima e para baixo se anulam em parte.
 > Somados em valor absoluto, os erros do relatório chegam a cerca de **R$ 45,6 mil**.
 
 ---
 
-## 📊 Divergências por tipo
+## Divergências por tipo
 
 ```mermaid
 pie showData title Pedidos divergentes por tipo (31 ocorrências em 30 pedidos)
@@ -59,17 +59,17 @@ pie showData title Pedidos divergentes por tipo (31 ocorrências em 30 pedidos)
 
 | Tipo | Pedidos | Impacto no faturamento do relatório |
 |---|---:|---:|
-| 🗑️ `EXCLUIDO_PRESENTE_NO_DESTINO` | 5 | 🔺 + R$ 16.270,76 |
-| 📑 `DUPLICADO_NO_DESTINO` | 4 | 🔺 + R$ 12.166,63 |
-| 🕳️ `AUSENTE_NO_DESTINO` | 5 | 🔻 − R$ 11.173,64 |
-| 0️⃣ `VALOR_AUSENTE_NA_ORIGEM` | 3 | 🔻 − R$ 5.836,01 (estimado) |
-| 💰 `VALOR_DIVERGENTE` | 3 | 🔺 + R$ 116,28 |
-| 🪙 `VALOR_DIVERGENTE_CENTAVOS` | 4 | − R$ 0,02 |
-| 🏷️ `STATUS_DIVERGENTE` | 4 | sem efeito no total |
-| 👤 `CLIENTE_DIVERGENTE` | 3 | sem efeito no total |
-| | | **Soma: + R$ 11.544,00** ✅ |
+| `EXCLUIDO_PRESENTE_NO_DESTINO` | 5 | + R$ 16.270,76 |
+| `DUPLICADO_NO_DESTINO` | 4 | + R$ 12.166,63 |
+| `AUSENTE_NO_DESTINO` | 5 | − R$ 11.173,64 |
+| 0`VALOR_AUSENTE_NA_ORIGEM` | 3 | − R$ 5.836,01 (estimado) |
+| `VALOR_DIVERGENTE` | 3 | + R$ 116,28 |
+| `VALOR_DIVERGENTE_CENTAVOS` | 4 | − R$ 0,02 |
+| `STATUS_DIVERGENTE` | 4 | sem efeito no total |
+| `CLIENTE_DIVERGENTE` | 3 | sem efeito no total |
+| | | **Soma: + R$ 11.544,00**|
 
-## 💸 Impacto financeiro por tipo (R$)
+## Impacto financeiro por tipo (R$)
 
 ```mermaid
 xychart-beta
@@ -82,7 +82,7 @@ xychart-beta
 > **Prioridade 1:** pedidos excluídos que continuam no relatório (maior valor; uma única causa — as exclusões não são aplicadas).
 > **Prioridade 2:** linhas duplicadas (correção simples: uma linha por pedido).
 
-## 🧐 Observações que *não* são divergência
+## Observações que *não* são divergência
 
 Casos que parecem problema, mas estão corretos. Ficam fora do relatório para não acusar erro inexistente
 (detalhes em [`observacoes_nao_divergencias.csv`](observacoes_nao_divergencias.csv)).
@@ -100,7 +100,7 @@ Casos que parecem problema, mas estão corretos. Ficam fora do relatório para n
 
 ---
 
-## ⚙️ Como funciona
+## Como funciona
 
 ```mermaid
 flowchart LR
@@ -120,7 +120,7 @@ flowchart LR
 3. **Comparação** por pedido e por campo, classificando tipo, severidade, confiança e causa provável.
 4. **Relatórios** gerados na raiz do projeto.
 
-## 🚀 Como rodar
+## Como rodar
 
 ```bash
 pip install -r requirements.txt
@@ -136,7 +136,7 @@ python -m pytest -q               # 20 testes
 | `--tolerancia-centavos 5` | limite abaixo do qual a diferença de valor é tratada como centavos |
 | `--sem-verificacao-sql` | pula a conferência pela implementação SQL |
 
-## 📦 Entregáveis
+## Entregáveis
 
 | Arquivo | Conteúdo |
 |---|---|
@@ -147,7 +147,7 @@ python -m pytest -q               # 20 testes
 | [`transicoes_de_status_suspeitas.csv`](transicoes_de_status_suspeitas.csv) | status que "volta" de CANCELADO/ENTREGUE (informativo) |
 | [`impacto_financeiro.csv`](impacto_financeiro.csv) · [`metricas.json`](metricas.json) | decomposição do impacto em R$ e métricas da execução |
 
-## 🗂️ Estrutura
+## Estrutura
 
 | Caminho | Papel |
 |---|---|
